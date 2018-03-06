@@ -10,7 +10,7 @@ if (isset($_GET['content'])) {
     $parset->enableNewlines = true;
     $markdown = file_get_contents(__DIR__.'/markdown/'.$content.'.md');
     if ($markdown === false) {
-        $markdown = "# File Not Found: ${date}";
+        $markdown = "# File Not Found: ${content}";
     }
     echo $parser->parse($markdown);
 }
