@@ -4,6 +4,10 @@ if ($seed !== ">B0ofMnbI=z5=VRt") {
     exit;
 }
 ?>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-2">
+          </div>
+        </div>
         </main>
       </div>
       <footer style="text-align: justify;">

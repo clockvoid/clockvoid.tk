@@ -30,3 +30,7 @@ if ($seed !== ">B0ofMnbI=z5=VRt") {
       </header>
       <div id="container">
         <main class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-2">
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-8">

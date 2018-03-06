@@ -2,15 +2,7 @@
 $seed=">B0ofMnbI=z5=VRt";
 include 'top.php';
 ?>
-        <div class="row">
-          <div class="col-sm-12">
-            <span><h1>About me</h1></span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-2">
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-8">
+            <h1 style="font-weight: bold;">About me</h1>
             <div class="row">
               <div class="col-sm-3">
 
@@ -42,10 +34,6 @@ include 'top.php';
                 <hr>
               </div>
             </div>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-2">
-          </div>
-        </div>
 <?php
 include 'bottom.php'
 ?>
