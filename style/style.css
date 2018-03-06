@@ -18,17 +18,9 @@ header {
 .flex-container {
     display: flex;
     display: -webkit-flex;
-}
-
-@media (max-width: 750px) {
-    .flex-container {
-        display: flex;
-        display: -webkit-flex;
-        flex-direction: column;
-        -webkit-flex-direction: column;
-        justify-content: center;
-        -webkit-justify-content: center;
-    }
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-wrap: wrap;
 }
 
 #element {
@@ -36,8 +28,10 @@ header {
     margin: 8px 8px;
     padding: 4px 4px;
     box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease-in-out;
     position: relative;
+    flex-direction: column;
+    flex-basis: 320px;
 }
 
 #element a {
@@ -63,6 +57,14 @@ header {
 
 .row {
     padding: 12px;
+}
+
+code {
+    all: unset;
+    background: #e6e6e6;
+    border-radius: .125rem;
+    font-family: 'Source Code Pro', monospace;
+    padding: 0.125rem 0.25rem;
 }
 
 footer {

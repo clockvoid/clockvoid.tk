@@ -8,13 +8,15 @@ if ($seed !== ">B0ofMnbI=z5=VRt") {
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.7/dist/mini-default.min.css">
+    <link rel="stylesheet" href="./style/mini-default.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro">
     <meta charset="utf-8">
     <title>基礎のホームページ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="./script/script.js"></script>
   </head>
   <body>
