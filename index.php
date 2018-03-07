@@ -43,32 +43,15 @@ include './top.php';
         デモで作成したReversiのコードです．一応ここにリンクを貼ります．
         </p>
     </div>
-</div>
-<h1 style="font-weight: bold;">Blog</h1>
-<p>
-    このサイトを自作のブログとして管理します．
-</p>
-<div class="flex-container">
     <div id="element">
         <strong>
-            <a href="./blog.php?content=2018-03-06">
-                <p>このサイトの仕組み</p>
+            <a href="./blog.php">
+                <p>Blog</p>
             </a>
         </strong>
         <br>
         <p>
-            2018-03-06の記事
-        </p>
-    </div>
-    <div id="element">
-        <strong>
-            <a href="./blog.php?content=archlinux">
-                <p>Arch Linuxでやってきたこと</p>
-            </a>
-        </strong>
-        <br>
-        <p>
-            僕がArch Linuxでやってきた設定などです．秘伝のタレです．
+        Blogです．あんまり更新していません．
         </p>
     </div>
 </div>
