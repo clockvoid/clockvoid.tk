@@ -11,7 +11,7 @@ if ($seed !== ">B0ofMnbI=z5=VRt") {
     <link rel="stylesheet" href="./style/mini-default.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
     <meta charset="utf-8">
     <title>基礎のホームページ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
