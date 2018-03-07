@@ -49,6 +49,7 @@ header {
 }
 
 #contents {
+    background-color: white;
     position: relative;
     min-height: 100%;
 
@@ -106,6 +107,11 @@ code {
     border-radius: .125rem;
     font-family: 'Source Code Pro', monospace;
     padding: 0.125rem 0.25rem;
+}
+
+p.date {
+    text-align: right;
+    color: #9E9E9E;
 }
 
 footer {

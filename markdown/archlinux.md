@@ -1,4 +1,5 @@
 # Arch Linuxでやってきたこと
+<p class="date">Date: 2018-03-06</p>
 
 ![Arch Linux](https://i.imgur.com/qccLluT.png)
 

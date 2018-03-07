@@ -43,6 +43,17 @@ if (isset($_GET['content'])) {
             僕がArch Linuxでやってきた設定などです．秘伝のタレです．
         </p>
     </div>
+    <div id="element">
+        <strong>
+            <a href="./blog.php?content=kotlin-coroutines">
+                <p>KotlinのCoroutineについて</p>
+            </a>
+        </strong>
+        <br>
+        <p>
+            KotlinのCoroutineについて少しだけまとめてみました．
+        </p>
+    </div>
 </div>
 
 <?php
