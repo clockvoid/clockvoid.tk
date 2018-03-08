@@ -69,6 +69,7 @@ div.article {
     justify-content: center;
     -webkit-justify-content: center;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 }
 
 #element {
@@ -79,7 +80,9 @@ div.article {
     transition: box-shadow 0.2s ease-in-out;
     position: relative;
     flex-direction: column;
+    -webkit-flex-direction: column;
     flex-basis: 320px;
+    -webkit-flex-basis: 320px;
 }
 
 #element a {
@@ -103,8 +106,8 @@ div.article {
     padding-bottom: 100px;
 }
 
-.row {
-    padding: 12px;
+main.container {
+    padding: 10px;
 }
 
 code {
