@@ -23,6 +23,17 @@ if (isset($_GET['content'])) {
 <div class="flex-container">
     <div id="element">
         <strong>
+            <a href="./blog.php?content=kotlin-coroutines">
+                <p>KotlinのCoroutineについて</p>
+            </a>
+        </strong>
+        <br>
+        <p>
+            KotlinのCoroutineについて少しだけまとめてみました．
+        </p>
+    </div>
+    <div id="element">
+        <strong>
             <a href="./blog.php?content=2018-03-06">
                 <p>このサイトの仕組み</p>
             </a>
@@ -41,17 +52,6 @@ if (isset($_GET['content'])) {
         <br>
         <p>
             僕がArch Linuxでやってきた設定などです．秘伝のタレです．
-        </p>
-    </div>
-    <div id="element">
-        <strong>
-            <a href="./blog.php?content=kotlin-coroutines">
-                <p>KotlinのCoroutineについて</p>
-            </a>
-        </strong>
-        <br>
-        <p>
-            KotlinのCoroutineについて少しだけまとめてみました．
         </p>
     </div>
 </div>
