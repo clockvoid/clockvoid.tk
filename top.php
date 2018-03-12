@@ -23,11 +23,6 @@ if ($seed !== ">B0ofMnbI=z5=VRt") {
     <div id="contents">
       <header class="sticky shadow-large">
         <a href="./index.php" class="logo"><strong>基礎のほーむぺーじ</strong></a>
-        <a href="./index.php" class="button">Home</a>
-        <span>|</span>
-        <a href="#" class="button">About</a>
-        <a href="./contact.php" class="button">Contact</a>
-        <span>|</span>
         <a href="https://github.com/clockvoid" class="button"><i class="fa fa-github" aria-hidden="true" style="font-size: 1.3em; position: relative; buttom: -2px; margin-right: 2px;"></i> &nbsp; GitHub </a>
       </header>
       <div id="container">
