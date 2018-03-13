@@ -129,6 +129,13 @@ p.date {
     color: #9E9E9E;
 }
 
+@media screen and (max-width: 1200px){
+    pre {
+        /* if content is too long, wrap the code */
+        white-space: pre-wrap;
+    }
+}
+
 footer {
     position: absolute;
     bottom: 0;
