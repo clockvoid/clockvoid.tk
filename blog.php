@@ -28,6 +28,7 @@ if (isset($_GET['content'])) {
             </a>
         </strong>
         <br>
+        <p class="date">2018-03-12</p>
         <p>
             Bonfire Androidのミートアップイベントに行ってきたので少しまとめてみました．
         </p>
@@ -39,6 +40,7 @@ if (isset($_GET['content'])) {
             </a>
         </strong>
         <br>
+        <p class="date">2018-03-07</p>
         <p>
             KotlinのCoroutineについて少しだけまとめてみました．
         </p>
@@ -50,8 +52,9 @@ if (isset($_GET['content'])) {
             </a>
         </strong>
         <br>
+        <p class="date">2018-03-06</p>
         <p>
-            2018-03-06の記事
+            このサイトの仕組みについて少しだけまとめてみました．ブログ機能で悪戦苦闘しています．
         </p>
     </div>
     <div id="element">
@@ -61,6 +64,7 @@ if (isset($_GET['content'])) {
             </a>
         </strong>
         <br>
+        <p class="date">2018-03-06</p>
         <p>
             僕がArch Linuxでやってきた設定などです．秘伝のタレです．
         </p>

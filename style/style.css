@@ -96,6 +96,12 @@ div.article {
 
 #element p {
     padding: 10px;
+    padding-top: 5px;
+}
+
+#element p.date {
+    padding-top: 10px;
+    padding-bottom: 0pc;
 }
 
 #element:hover {
