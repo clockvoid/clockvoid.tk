@@ -3,7 +3,19 @@ module.exports = {
   output: {
     filename: './script.js',
   },
-  resolve: {
-    [
+  module: {
+    rules: [{
+      test: /\.scss$/,
+      use: [{
+        loader: "style-loader"
+      }, {
+        loader: "css-loader"
+      }, {
+        loader: "scss-loader",
+        options: {
+          includePaths: ["./node_modules/mini.css/src/flavors/"]
+        }
+      }]
+    }]
   }
 };

@@ -1,3 +1,7 @@
+
+$ = require('jquery')
+require("../node_modules/mini.css/src/flavors/mini-default.scss");
+
 $(document).ready(function () {
   PR.prettyPrint();
   $('a[href^="#"]').click(function () {
