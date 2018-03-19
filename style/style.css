@@ -5,32 +5,11 @@ html, body {
 
 h1 {
     position: relative;
-    padding: 0.25em 1em;
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
     font-weight: bold;
 }
 
-h1:before, h1:after {
-    content: '';
-    position: absolute;
-    top: -7px;
-    width: 2px;
-    height: -webkit-calc(100% + 14px);
-    height: calc(100% + 14px);
-    background-color: black;
-}
-
-h1:before {
-    left: 7px;
-}
-
-h1:after {
-    right: 7px;
-}
-
 h2, h3, h4, h5, h6 {
-    margin: 3.2em -0.2em 1.8em;
+    margin: 3.2em 0.2em 1.8em;
     border-bottom: solid 3px #BDBDBD;
     position: relative;
     font-weight: bold;

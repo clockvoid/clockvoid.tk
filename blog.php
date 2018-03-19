@@ -23,6 +23,18 @@ if (isset($_GET['content'])) {
 <div class="flex-container">
     <div id="element">
         <strong>
+            <a href="./blog.php?content=bootstrap">
+                <p>Bootstrap with CakePHP 3.x</p>
+            </a>
+        </strong>
+        <br>
+        <p class="date">2018-03-20</p>
+        <p>
+            CakePHPでBootstrapテーマを適用してみましょう．
+        </p>
+    </div>
+    <div id="element">
+        <strong>
             <a href="./blog.php?content=2018-03-12">
                 <p>Bonfire Android</p>
             </a>
