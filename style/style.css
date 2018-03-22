@@ -6,10 +6,11 @@ html, body {
 h1 {
     position: relative;
     font-weight: bold;
+    margin-top: 0;
 }
 
 h2, h3, h4, h5, h6 {
-    margin: 3.2em 0.2em 1.8em;
+    margin: 3.2em 8px 1.8em;
     border-bottom: solid 3px #BDBDBD;
     position: relative;
     font-weight: bold;
@@ -37,9 +38,22 @@ header {
 }
 
 div.article {
+    position: relative;
     background-color: white;
     box-shadow: 0.5px 0px 1.5px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
-    padding: 20px;
+    padding: 32px;
+}
+
+@media screen and (max-width: 1000px) {
+    div.article {
+        padding: 16px 16px 32px;
+        width: calc(100% - 32px);
+    }
+}
+
+div.article * {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .flex-container {
@@ -80,7 +94,7 @@ div.article {
 
 #element p.date {
     padding-top: 10px;
-    padding-bottom: 0pc;
+    padding-bottom: 0px;
 }
 
 #element:hover {
@@ -93,6 +107,12 @@ div.article {
 
 main.container {
     padding: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    main.container  {
+        padding: 0px;
+    }
 }
 
 code {
@@ -108,12 +128,17 @@ p.date {
     color: #9E9E9E;
 }
 
-@media screen and (max-width: 1200px){
-    pre {
-        /* if content is too long, wrap the code */
-        white-space: pre-wrap;
-    }
+pre {
+    /*margin: 1.5em -32px !important;*/
+    box-sizing: border-box;
+    margin: 1.5em 0px;
 }
+
+/*@media screen and (max-width: 1000px) {
+    pre {
+        margin: 1.5em -16px !important;
+    }
+}*/
 
 footer {
     position: absolute;
