@@ -6,23 +6,22 @@ include 'top.php';
                 <center><img style="max-width: 30%; border-radius: 12px; margin-bottom: .8em;" src="https://pbs.twimg.com/profile_images/745222112273522688/-23LMFEG.jpg" alt=""></center>
                 <figcaption><center>↑ぼく</center></figcaption>
               <br>
-<table style="border-bottom-color: #dddddd; border-bottom-width: 1px; border-bottom-style: solid;">
-    <tbody>
+<table>
+    <thead>
         <tr>
             <th>名前</th>
-            <td>基礎</td>
-        </tr>
-        <tr>
             <th>職業</th>
-            <td>大学生</td>
-        </tr>
-        <tr>
             <th>趣味</th>
-            <td>プログラミング</td>
-        </tr>
-        <tr>
             <th>使用環境</th>
-            <td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="名前">基礎</td>
+            <td data-label="職業">大学生</td>
+            <td data-label="趣味">プログラミング</td>
+            <td data-label="使用環境">
+                <br>
                 <p>OS</p>
                 <ul>
                     <li>Arch Linux</li>
@@ -39,7 +38,9 @@ include 'top.php';
                     <li>Neovim</li>
                     <li>Intellij</li>
                 </ul>
+                <br>
             </td>
+        </tr>
     </tbody>
 </table>
 <?php

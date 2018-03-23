@@ -38,6 +38,14 @@ table ul {
     padding-left: 2em;
 }
 
+table td:before {
+    padding-right: 2em;
+}
+
+table td {
+    text-align: left !important;
+}
+
 #contents {
     position: relative;
     min-height: 100%;
