@@ -4,6 +4,10 @@
 
 $(document).ready(function () {
   PR.prettyPrint();
+  var width = Math.min($('div.article').width(), $(window).width() - 32, $(window).height() - 100);
+  $('#canvas').get(0).setAttribute("width", width.toString());
+  $('#canvas').get(0).setAttribute("height", width.toString());
+
   $('a[href^="#"]').click(function () {
     var speed = 400;
     var href = $(this).attr("href");
