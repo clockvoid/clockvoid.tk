@@ -128,10 +128,10 @@ code {
     border-radius: .125rem;
     font-family: 'Source Code Pro', monospace;
     padding: 0.125rem 0.25rem;
-    white-space: -moz-pre-wrap; /* Mozilla */
-    white-space: -pre-wrap;     /* Opera 4-6 */
-    white-space: -o-pre-wrap;   /* Opera 7 */
-    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-code-wrap; /* Mozilla */
+    white-space: -code-wrap;     /* Opera 4-6 */
+    white-space: -o-code-wrap;   /* Opera 7 */
+    white-space: code-wrap;      /* CSS3 */
     word-wrap: break-word;      /* IE 5.5+ */
 }
 
