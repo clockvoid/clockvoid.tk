@@ -74,6 +74,8 @@ var Field = __webpack_require__(1);
 var View = __webpack_require__(2);
 var Event = __webpack_require__(3);
 window.onload = function () {
+};
+var startOthello = function () {
     var size = 8;
     var view = new View.View();
     var field = new Field.Field(size, view);
