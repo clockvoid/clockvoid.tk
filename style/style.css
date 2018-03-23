@@ -29,6 +29,15 @@ header {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
+table {
+    width: 100%;
+    max-width: 100%;
+}
+
+table ul {
+    padding-left: 2em;
+}
+
 #contents {
     position: relative;
     min-height: 100%;
@@ -45,9 +54,14 @@ div.article {
 }
 
 @media screen and (max-width: 1000px) {
+    #contents {
+        background-color: white !important;
+    }
+
     div.article {
         padding: 16px 16px 32px;
         width: calc(100% - 32px);
+        box-shadow: none;
     }
 }
 
@@ -74,14 +88,21 @@ div.article * {
     position: relative;
     flex-direction: column;
     -webkit-flex-direction: column;
-    flex-basis: 25%;
-    -webkit-flex-basis: 25%;
+    flex-basis: calc(25% - 18px);
+    -webkit-flex-basis: calc(25% - 18px);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     #element {
         flex-basis: 100%;
         -webkit-flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+    #element {
+        flex-basis: calc(50% - 18px);
+        -webkit-flex-basis: calc(50% - 18px);
     }
 }
 
