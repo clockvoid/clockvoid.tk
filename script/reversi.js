@@ -73,9 +73,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Field = __webpack_require__(1);
 var View = __webpack_require__(2);
 var Event = __webpack_require__(3);
-window.onload = function () {
-};
-var startOthello = function () {
+function startOthello() {
     var size = 8;
     var view = new View.View();
     var field = new Field.Field(size, view);
@@ -86,7 +84,14 @@ var startOthello = function () {
     view.addCanvasEventListener(clickEventListener);
     view.addCanvasEventListener(touchEventListener);
     view.addButtonEventListener(buttonEventListener);
-};
+}
+
+window.onload = (function() {
+  var width = Math.min($('div.article').width(), $(window).width() - 32, $(window).height() - 100);
+  $('#canvas').get(0).setAttribute("width", width.toString());
+  $('#canvas').get(0).setAttribute("height", width.toString());
+  startOthello();
+})
 
 
 /***/ }),
@@ -415,7 +420,6 @@ var ButtonEventListener = (function () {
     return ButtonEventListener;
 }());
 exports.ButtonEventListener = ButtonEventListener;
-
 
 /***/ })
 /******/ ]);
