@@ -24,7 +24,7 @@ if (isset($_GET['content'])) {
     <div id="element">
         <strong>
             <a href="./blog.php?content=2018-03-26">
-                <p>Bonfire Frontend #!</p>
+                <p>Bonfire Frontend #1</p>
             </a>
         </strong>
         <br>
