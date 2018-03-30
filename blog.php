@@ -23,6 +23,18 @@ if (isset($_GET['content'])) {
 <div class="flex-container">
     <div id="element">
         <strong>
+            <a href="./blog.php?content=archlinux_haskell">
+                <p>Arch LinuxでHaskellを使う際にやっていること</p>
+            </a>
+        </strong>
+        <br>
+        <p class="date">2018-03-29</p>
+        <p>
+            Arch Linuxでは地獄と言われるHaskellの環境構築についてまとめてみました．
+        </p>
+    </div>
+    <div id="element">
+        <strong>
             <a href="./blog.php?content=2018-03-28">
                 <p>CookPad Tech Kitchen #15</p>
             </a>
