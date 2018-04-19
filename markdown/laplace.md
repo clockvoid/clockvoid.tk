@@ -2,6 +2,9 @@
 
 <p class="date">2018-04-17</p>
 
+GitHubに[リポジトリ](https://github.com/clockvoid/LaplaceTransformCheatSheet)
+作っちゃいました😜
+
 ## 動機
 ラプラス変換，皆さん多用してますよね？
 多用するとなると，ラプラス変換表を使いたくなるときもあると思うのです．

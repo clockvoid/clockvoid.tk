@@ -23,6 +23,18 @@ if (isset($_GET['content'])) {
 <div class="flex-container">
     <div id="element">
         <strong>
+            <a href="./blog.php?content=laplace">
+                <p>Laplace変換チートシートを作ってみました．</p>
+            </a>
+        </strong>
+        <br>
+        <p class="date">2018-04-17</p>
+        <p>
+            Laplace変換，多用してますよね？
+        </p>
+    </div>
+    <div id="element">
+        <strong>
             <a href="./blog.php?content=react_ts">
                 <p>TypeScriptでReact入門してみましょう．</p>
             </a>
