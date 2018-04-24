@@ -209,3 +209,31 @@ public createOnClick: (i: number) => () => void = (i: number) => {
 なんだか最低の気分ですが，こうしなければ動かないので仕方ありません．とりあえず，これでインタラクティブ化したコードで状態を上げることに成功しました．今後もこのような要領で状態を上げます．
 
 続きはまた今度追記します（2018-04-15）
+
+追記（2018-04-24）
+
+### Functional Components
+Reactには，Functional Componentsと呼ばれる素晴らしい仕組みがあります．状態を持たなくなったコンポーネントはわざわざクラスとして記述する必要はなく，普通に`function`と書いて，オブジェクトを作ればいいだろうというものです．
+ここでは，Squareクラスがもう必要ありませんので，これをFunctional Componentsにしてしまいましょう．
+
+```typescript
+const Square: React.SFC<ISquareProps> = (props: ISquareProps) => {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+}
+```
+
+Squareクラスをこの関数に置き換えてしまえばOKです．この関数の型は`React.SFC`と呼ばれるものです．これを使うことの利点は，コンポーネントを使用した際にIDEが入力保管をしてくれるという点と，`defaultProps`メンバに連想配列を代入することで，デフォルト引数を指定できる点にあります．この方については，[この記事](https://medium.com/@iktakahiro/react-stateless-functional-component-with-typescript-ce5043466011)
+にて詳しく取り扱われています
+
+### Taking Turns
+この章については，JavaScriptのままやればOKです．ただし，`xIsNext`を`IBoardState`に追加するのを忘れないようにしましょう．
+
+### Decularing a Winner
+この章でも引き続きそのままやりましょう．ただし，`calculateWinner()`関数の最後のループはもっと単純なものを使えと言われるので，`forEach`にして単純化しましょう．（そもそもなんでチュートリアルのコードこうなってるの・・・Facebookさん！）
+
+## Storing A History
+
