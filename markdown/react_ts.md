@@ -1,4 +1,4 @@
-f ReactをTypeScriptで入門してみる
+# ReactをTypeScriptで入門してみる
 
 <p class="date">2018-04-15</p>
 <p class="date">最終更新:2018-04-26</p>
