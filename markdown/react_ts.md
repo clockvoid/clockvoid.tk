@@ -1,4 +1,4 @@
-# ReactをTypeScriptで入門してみる
+f ReactをTypeScriptで入門してみる
 
 <p class="date">2018-04-15</p>
 <p class="date">最終更新:2018-04-26</p>
@@ -8,6 +8,9 @@
 RxJavaなどを触る手もありましたが，Reactやってみたいと思っていたので，ここで入門したいと思い，導入してみました．
 
 ただ，私はJavaScript辛いので，TypeScriptでやりたいと思い，TypeScriptでチュートリアルを触ってみることにしました．
+
+なお，最終的なコードを[GitHub](https://github.com/clockvoid/ReactTutorialOnTypeScript)
+に上げました．よろしければご覧ください．コミットは多分，節目ごとにしているはずです．
 
 ## Installation
 まずは，諸々のインストールから始めましょう．
@@ -26,7 +29,7 @@ create-react-app my-app --scripts-version=react-scripts-ts
 
 消費するディスク容量としては，大体`300MB`くらいでした．依存パッケージが多いので，それなりにでかいです．
 
-## チュートリアルをやってみる1（Overviewまで）
+## 1 Overview
 まずは，Reactの
 [チュートリアルページ](https://reactjs.org/tutorial/tutorial.html)
 にアクセスしましょう．なんか英語のページが出てきますが，日本語にする方法がわかりませんので，そのまま英語を読みましょう．
@@ -236,7 +239,7 @@ Squareクラスをこの関数に置き換えてしまえばOKです．この関
 ### Decularing a Winner
 この章でも引き続きそのままやりましょう．ただし，`calculateWinner()`関数の最後のループはもっと単純なものを使えと言われるので，`forEach`にして単純化しましょう．（そもそもなんでチュートリアルのコードこうなってるの・・・Facebookさん！）
 
-## Storing A History
+## 3 Storing A History
 履歴を作れるようにしてみましょう．
 履歴を作るためには，`IHistroy`というデータ構造を以下のように指定して，ターンを追うごとに配列の要素を増やしていくというアプローチを撮っています．
 
