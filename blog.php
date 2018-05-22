@@ -23,6 +23,18 @@ if (isset($_GET['content'])) {
 <div class="flex-container">
     <div id="element">
         <strong>
+            <a href="./blog.php?content=xorg_virtualbox">
+                <p>XorgとVirtualBox Guest Additionのバージョン問題</p>
+            </a>
+        </strong>
+        <br>
+        <p class="date">2018-05-22</p>
+        <p>
+            XorgをバージョンアップしたらVirtualBoxの3Dアクセラレータが読み込まれなくなったのでその解決の過程をまとめてみました
+        </p>
+    </div>
+    <div id="element">
+        <strong>
             <a href="./blog.php?content=cake_auth">
                 <p>CakePHPで認証周りを作ってみましょう．</p>
             </a>
