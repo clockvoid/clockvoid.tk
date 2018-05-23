@@ -10,8 +10,8 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-    margin: 3.2em 8px 1.8em;
-    border-bottom: solid 3px #BDBDBD;
+    margin: 1.2em 8px 0.5em;
+    border-bottom: solid 2px #BDBDBD;
     position: relative;
     font-weight: bold;
 }
@@ -20,7 +20,7 @@ h2:after, h3:after, h4:after, h5:after, h6:after {
     position: absolute;
     content: " ";
     display: block;
-    border-bottom: solid 3px #424242;
+    border-bottom: solid 2px #424242;
     bottom: -3px;
     width: 20%;
 }
