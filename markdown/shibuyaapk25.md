@@ -128,4 +128,13 @@ App Bundle作るのは簡単だよ．
 Dymanic Feature Modulesはコスパ微妙？
 
 ## 三人目:Material Components
+Material Components:Material Theme Editor（スケッチファイルのプラグイン），Material Components
 
+Androidに限らず，いろいろな場所にUIデザインを提供する
+
+dependenciesに入れるsupport.designを差し替えるだけ
+
+* Bottom App Bar
+* Cips(ChisGroup)
+* Material Button:BackgroundTintで色とか変えられる
+* TextFields
