@@ -31,6 +31,9 @@ yaourt -S linux-lts linux-lts-headers
 上記のようなこともあり，無事に`virtualbox-guest-dkms`は正常であることがわかりました．
 （Tips:ただし，完全に正常というわけではありません．何故か`4.16.9`のカーネルでVirtualBoxの機能のファイル共有をして，その共有したディレクトリに`maim`でスクリーンショットを記録すると大きい画像だとバグってうまく表示できない画像が吐かれます．`maim`か`vboxsf-4.16`のバグです．しばらくは`lts`カーネルを使うようにしましょう．）
 
+（2018-06-09追記）:どうやら上で書いたマウント関連の不具合は[解決されたよう](https://git.archlinux.org/svntogit/community.git/commit/trunk?h=packages/virtualbox&id=67ef75c9673d9a58a81db41a790dd30635971785)
+です．これで`lts`パッケージを使い続けずに済みます．
+
 ## Xorg
 結局，多分不具合はXorgのせいだとわかりました．普通にはじめからそうすればいいとか思いますが，`xorg.0.log`を確認すると，
 
