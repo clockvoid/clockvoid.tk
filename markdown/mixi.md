@@ -1,5 +1,9 @@
 # Dive into mixi
 
+今日はDive into mixiに行ってきました．学生向けのイベントで，参加者全員学生という新しい構成でしたが，とても楽しかったです．
+
+ただ，渋谷で迷って辛すぎました😂
+
 ## make docker image with haskell
 現時点ではmixiにHaskellのプロジェクトはない
 
