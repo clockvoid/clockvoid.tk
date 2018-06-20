@@ -46,4 +46,41 @@ UpdateはViewからのイベントを受けてModelを変化させます．こ�
 
 SPAですので，Routingは必須です．そのための機能として，Routingがあります．基本的にはチュートリアルに書いてることが全てです．適当にルートを決めて，それぞれにViewを設定し，ボタン等で移動したいときは`Navigation.newUrl : String -> Cmd msg`を使います．先程説明したコマンドを返しますので，`update`が呼び出されて所定の文脈操作が終わったあとにジャンプするなどの制御が可能です．
 
-## 
+## Ports
+次に，Portsについて見ていきましょう．
+
+PortsはJavaScriptとElmでやり取りするための仕組みです．実はElmにはJavaScriptとやり取りするための仕組みがいくつか用意されており，NativeやPortsなどがその一例となりますが，私はPortsしか使ったことがありませんので，それ以外はよくわかりません．ただし，NativeはPortsの中身みたいなもので，Tutorialなどでは見ることのできない中核的な要素です．基本的にはNativeを扱うことはないでしょう．
+
+### 使い方
+Portsでは，`port module`としたモジュールをElm側に定義することから始めます．まずは，以下のようにモジュールを作ってみましょう．
+
+```Elm
+-- Port.elm
+port module Port exposing (..)
+
+port setSomething : String -> Cmd msg
+port getSomething : (String -> msg) -> Sub msg
+```
+
+これができたら，JavaScript側に対応する動作を記述します．
+
+```JavaScript
+-- index.js
+
+var app = Main.embed(document.getElementById("root"));
+var someThing = "";
+
+app.ports.getSomething.send(someThing); // call when something happend
+
+app.ports.setSomething.subscription(function (str) { // call at regular intervals
+    someThing = str;
+});
+```
+
+だいたいこんな感じです，`send`でElmにデータを送っています．ここで，Elm側ではSubscriptionが生成される関数となっていますので，これはSubscriptionで受け取ります．
+`subscription`でElmからデータを送っていますが，これも直感的でわかりやすいですね．これはElm側ではイベント時などでコマンドを実行する機会があるときにこの関数でコマンドを作ります．
+
+## 最後に
+今回はざっくりとまとめてみました．基本的にはチュートリアルを読んだ前提な感じになっていまいましたが，自分への備忘録的な側面が強いため，お許しください．
+
+Elmで関数型SPA作成，凄まじい時代です．
