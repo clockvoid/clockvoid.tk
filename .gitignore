@@ -3,3 +3,4 @@ vendor
 node_modules
 Session.vim
 script.js
+.python-version
