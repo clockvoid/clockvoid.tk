@@ -23,6 +23,18 @@ if (isset($_GET['content'])) {
 <div class="flex-container">
     <div id="element">
         <strong>
+            <a href="./blog.php?content=circleci">
+                <p>CircleCIが難しい話</p>
+            </a>
+        </strong>
+        <br>
+        <p class="date">2018-09-23</p>
+        <p>
+            軽い気持ちでCircleCI 2.0対応しよ〜と思ったら詰まったのでまとめてみました．
+        </p>
+    </div>
+    <div id="element">
+        <strong>
             <a href="./blog.php?content=voyage1day">
                 <p>Voyage Group 1day Intetern Ship</p>
             </a>
