@@ -23,6 +23,18 @@ if (isset($_GET['content'])) {
 <div class="flex-container">
     <div id="element">
         <strong>
+            <a href="./blog.php?content=shibuyaapk28">
+                <p>Shibuya.apk 28に行ってきました．</p>
+            </a>
+        </strong>
+        <br>
+        <p class="date">2018-09-28</p>
+        <p>
+            Shibuya.apk 28に行ってきたので，まとめてみました．
+        </p>
+    </div>
+    <div id="element">
+        <strong>
             <a href="./blog.php?content=circleci">
                 <p>CircleCIが難しい話</p>
             </a>
