@@ -85,26 +85,26 @@ Arrow:モナドを意識して作られたライブラリ
 * Effects
 * Option
 
-### Option<A>
+### Option
 Null安全よりも安全にプログラミングしようということらしい．
 値があるか，ないか．Maybeモナド．
 
-### Either<A,B>
+### Either
 例外処理を書くやつっぽい．（Haskellで例外書いたことない・・・）
 
 Leftにエラーを入れて，Rightに正常なデータを入れて使うらしい．（よくわからん）
 
-### Validated<E, A>
+### Validated
 成功値はエラーの戻り値をモデル化するためのもの
 
 エラーをいくつか蓄積できる．
 
 EitherとかこれとかはtoOptionでOptionになる
 
-### Semigroup<A>
+### Semigroup
 複数のエラーを合成できるもの
 
-### Try<A>
+### Try
 例外が発生する可能性のある関数呼び出しをモデル化する
 
 ### Integrationが存在する．
