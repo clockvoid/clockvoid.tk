@@ -24,6 +24,18 @@ if (isset($_GET['content'])) {
     <div id="element">
         <strong>
             <a href="./blog.php?content=towers15th">
+                <p>TechCon 2019に行ってきた話</p>
+            </a>
+        </strong>
+        <br>
+        <p class="date">2019-02-06</p>
+        <p>
+            DeNAのTechCon 2019に行ってきましたので，自分が聞いた講演を少しまとめました．
+        </p>
+    </div>
+    <div id="element">
+        <strong>
+            <a href="./blog.php?content=towers15th">
                 <p>IEEE TOWERSの運営として仕事をして感じたこと</p>
             </a>
         </strong>
