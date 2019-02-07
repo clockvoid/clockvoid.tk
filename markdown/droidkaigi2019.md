@@ -203,3 +203,80 @@ Webの世界だと，Micro Frontendsとか言う概念が存在．サーバが�
 もしくはアプリをでかくしない，Instant Appsを使うなど
 
 クライアントを含めたマイクロサービス戦略を考える！
+
+## Master of Android Theme
+Kyashの人
+
+Styleと同じことができる
+
+テーマはグローバルでスタイルはローカル．
+
+AppCompatを使っていつときによくPrimaryColorとかを設定するあれ
+
+ただし，以下の2つの問題が存在する
+* AppCompatだけでもテーマがたくさんありすぎる
+* attributeが多すぎる
+    * すべてのアトリビュートを理解するのは難しい，何を使えばいいかわかっていない人も多い
+
+### テーマの適用
+アプリケーション全体のテーマは何かしらのテーマを継承したものを使用し，Activityごとに設定できる
+
+継承はparent=で指定することもできるし，ドットを使って継承関係を示すこともできる．
+
+→いつparent=を使うべきか．
+* AppCompatやMaterialCompatなどのライブラリのテーマを継承する場合．
+    * res/values-v21/themes.xmlとかすれば，バージョンごとに対応するテーマを作成することができ，アトリビュートの数もそれだけ減っていく
+
+### テーマの命名規則
+Theme.AppCompat.Light.DarkACtionBar
+prefix.theme(library)name.background brightness.action bar brightness
+
+という感じに名前が作られている．
+
+3つに別れてるだけ．
+
+最後にBridgeがつくとMaterialComponentsのアトリビュートが使えるようになっている．
+
+### テーマの変え方
+Activity#setTheme(resId: Int)
+
+Fragmentでは，inflator.cloneContext()で行う
+
+色をvalue-night/colors.xmlとかに分けて夜用のカラーテーマを作っておくと良い
+
+### atributeの適切な設定方法
+Android FrameworkとかAppCompatとかMaterialComponentsのコードを読めば良い（暴言）
+
+カテゴリを作ってくれたらしい（7種類）
+* color
+* drawable
+* text appearance
+* shape appearance
+* widget style
+* theme
+* window configuration
+
+#### Colors
+これは[githubのリポジトリ](https://github.com/konifar/android-theme-attrs-to-markdown-table)
+を見て勉強すれば良さげ
+
+テキストカラーとかはMaterialComponentsでもAppCompatでもあまり変わってない
+
+#### Widgets Style
+TabLayoutではスタイルを適用しないと何も適用されてない状態になるw
+
+Widgetのattributeを知るためにはAndroid Studioの機能を使えばだいたいわかる．
+@style/Widget.〜を調べてみる．
+
+#### Shape Appearance
+cornerFamiliとcornerSizeの2つの要素が存在し，それがいろんなWidgetに適用されている
+
+### テーマかスタイル，どちらを使うべき？
+まぁ，デザインによるw
+
+テキストの形がWidgetによって違うような場合は，Widgetごとのテーマを書き換えてそれを全体のテーマとして適用させる
+
+### まとめ
+* たくさんatributeはあるけど，結局7種類に分けられるよ
+* 色や，Widgetのスタイルはデザインによって変えていかないといけないよ
+* Matedial Desingのドキュメントとを読んてきれいにデザインしよう
