@@ -806,3 +806,55 @@ Workerはタイムアウトが設定されている！→チェーンを使う�
 instrumental testを使う
 
 これだとストレージとか使い過ぎちゃうので，いい感じに容量制限とか，手動開放とかできるようになっている
+
+## build.gradle.ktsに移行しよう
+[スライド](https://speakerdeck.com/tnj/lets-migrate-to-build-dot-gradle-dot-kts?slide=79)
+
+[去年のスライド](https://speakerdeck.com/tnj/guide-to-build-gradle-plugin-for-efficient-development?slide=23)
+
+Gradle 5.0リリースでKotlin DSLがリリース
+
+本体の一部，GradleのなかにKotlinコンパイラまで全部入ってる
+
+Groovyが非推奨になったりはしない
+
+型があり，保管が聴く！最高！
+
+### 戦略
+* 足場を整える
+* 移行する
+    * 全部一気にならずに，少しずつ移行する
+
+### 基礎編
+androidxのconstraintlayout1.1.2はぶっ壊れているので使わない
+
+シングルクオートをダブルクオートに，省略されているカッコを書く
+→これだけで基本的には動く
+
+extとはなにか
+* ext.とかしなくても参照可能
+* ルートプロジェクトに入れとくと，全部で参照できる
+* Kotlinでは静的に宣言しないとだめ．→by extra()を使用
+
+tasks.create()を使ったほうがリファクタしやすい
+
+getByName()もとりあえず書いてみて怒られたらcreate()する
+
+割とやることが多い・・・
+
+### 実戦編
+多いけど基礎編の流れをやれば良い・・・
+
+つまづきポイント
+* プラグインパージョンを更新
+    * たまに通らない
+    * google-services 4.2.0以上が必要
+    * android-junit5は最新の1.3.20では動かない
+* 巨大なextを何とかする
+    * buildSrcを作成する
+    * 本当に面倒臭すぎて無理な場合はKotlinからGroovyのGradleファイルを呼べる
+    * buildscript {}は切り出せない
+    * apply falseすると後でapplyしてくれる
+* maven repositoryの呼び方が違う
+* sourceSetsはそもそも+=じゃなくて動くし，それが正しい
+
