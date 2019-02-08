@@ -492,3 +492,59 @@ Google Play Developper API
 [サンプル](https://github.com/KazaKago/StepReleaseDispatcher)あり．
 
 Crashlytics API:クラッシュ状況をクラッシュ時に取得できるが，統計データはくれない→クラッシュ状況を目安に公開をやめるのは目視でやるクラシカ方法がない
+
+## Spec2とMockKとJaCoCoでイケてるユニットテスト環境
+Mockitoが主流だった:10年前からある
+
+JUnitも使われてる
+
+→どちらもJavaせいで，Kotlin対応が不十分
+
+### MockK
+:Kotlin独自の言語仕様網羅
+
+スタブ，モック，スパイを提供
+
+Androidテスト全書
+
+mockk<T>でモックを作る，everyでモックにメソッドに引数と返り値を指定
+
+verifyにexactryを指定して回数を数えられる
+
+あとは，verify系の関数で処理
+
+Mockitoとの比較
+* MockitoはFinalな変数をモックできない（Kotlinでは死）
+* MockitoはStatixなメソッドをモックできない（Kontlinでは拡張関数やシングルトンオブジェクトが死）
+
+この辺全部モックできるい，suspend関数も行ける
+
+スタティックオブジェクトはビルド後のクラスへのパスでモックできるw
+
+### Spek2
+RubyのRSpecを似た文法．
+JUnit5で動作．
+Unit Testのみ．ロボレクトリックは無理
+
+descriptionでテストメソッドを指定して，contextを指定して，テスト（it）をする．descriptionなど，Stringで書く．
+
+Spec2のために，JUnit5用のGradle Pluginをインストール．
+
+junitPlatformdでengine.includeしてspec2とjunit-vitage（JUnit5の上でJUnit4を動かするもの）を追加する
+
+### JaCoCo
+Codecovと連携すると自動的にビジュアライズされたカバレッジを見られる
+
+一行一行見ることもできる
+
+Gradleタスク
+* カバレッジレポート作成
+    * 対象ファイルの指定
+    * 出力形式の指定
+    * 出力先の指定
+    * これらをUnit Testが終わったときにトリガー（dependsOn）
+* 集計
+    * モジュールごとにレポート作成
+    * executionDataにパスを渡すと自動的にマージされる
+* レポート作成
+    * 集計してまとめたものをレポートにする
