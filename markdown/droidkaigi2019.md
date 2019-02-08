@@ -620,3 +620,50 @@ GCがバックうラウンドで走りすぎるとThread-local alocationが走�
 →GCの動きはまじでシステム全体に影響する
 
 メモリアクセスパターンをいろいろ試してベンチマークしてみて！！！
+
+## Lifecycle,LiveData,ViewModel
+
+### Lifecycle
+イベントと状態を記録するもの
+
+LifecycleOwnerを作ることができ，FragmnetActivityとか
+Fragmnetとかのライフサイクルを見ることができる
+
+StateSavedなFragmentActivityはImmurable UIになってる
+→書き換えられない
+
+onViewStateRestoredとonDestroyViewではLifecycleとViewのライフサイクルが少し違うので注意が必要
+
+ProcessLifecycleOwner→プロセス全体のライフサイクルを管理
+
+バックうラウンドにいったり，アプリを閉じたときに遅延
+
+LifecycleServicez→サービスのライフサイクルを管理
+
+LifecycleObserverを作るにはアノテーションをつけて実装
+
+新しいViewのライフサイクルを作るには？→ライフサイクルが違うので辛い
+* Custom LifeccleOwner
+
+### LiveData
+さっきのLifecycleOwnerを使って作ったLifecyleOwnerオブジェクト
+
+アクティビティが死んでるとLiveDataはデータを送らない（撮っておく）
+
+postValueではバックルラウンドで，setValueではUIスレッドでデータが入る
+
+変形もカスタムしたやつが作れる
+* MediatorLiveData
+
+#### LiveData vs Rx
+LiveDataはただのホルダーである．イベントを実行するもんじゃない．
+
+でもLifecycleに基づいて動く
+
+LiveDataReactiveStreamsを使うと併用可能
+
+### ViewModel
+Repositoryからデータが飛んできてて，Viewがアクセスしてそのデータを取るようになってる
+
+viewModelScopeというコルーチンスコープも作った．
+コルーチンを使ってとりあえずデータのゲットを投げっぱなしにしておいて，キャンセルもできる
