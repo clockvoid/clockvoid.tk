@@ -742,3 +742,29 @@ WorkManagerを使うと複数処理をチェインして行うことができる
 ボトルネック
 * BatteryHistorian
     * Battery Lebelのイベントの間が短いと問題がある
+
+## Navigation Architecture Component
+Distinationは画面
+
+### デザイン原則
+Priciples of Navigationという公式のリファレンスがある
+
+* 条件付きだったり，一時的に表示される画面はStrat Distinationにならない
+* 遷移の操作はCurrent Distinationでそれに対して行われるべき
+* Upボタンはアプリを終了しない
+* UpとBackは同じ動作をする
+* Deep Linkでも同じスタックが形成
+
+### 作り方
+defaultNavAppをTrueにすると，Backボタンでデフォルトの戻る動作をする
+
+### DeepLink
+自動的にURLを解析し，適切な場所に戻ることができる
+
+### Toolbar
+labelにはsafeargsで取得したデータもつかえる
+
+### DroidKaigi-conference app
+Navigation Graphをインタープリトするプログラムで実際に参照が存在するかは見ていないのでできる
+
+マルチモジュールではこうするしかない
