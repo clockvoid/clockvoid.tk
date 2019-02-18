@@ -150,3 +150,12 @@ AABからAPKを作ることができる
 
 ### まとめ
 DaraBindingとかProguardなど，バグが残っている・・・
+
+## Kotlin Multiplatform Library
+ExpectとActualという，抽象化技術が良い
+
+MPPに対応してるライブラリを使わないと行けない
+
+AndroidのJunit testを実行するとうまく行かない→IDE設定を変える
+
+### CI難しい
