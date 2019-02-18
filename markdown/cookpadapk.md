@@ -62,3 +62,49 @@ commonの名前，悪い問題:なんでも使いそうで気持ち悪い
 ### まとめ
 マルチモジュール化の利点としてのビルド高速化などは意識しないでやらないとどうも変わらないらしい．
 
+## 加藤さん:Espresso Driverを用いたAppiumテスト
+### Appium in Androidについて
+モバイル端末向け自動テストツール．
+
+NodeJSによるHTTPサーバ．これを使ってUIを自動的に操作してテストする！
+
+Androidだけではなく，iOS，Webにも対応．
+
+UIAutomater
+→UIテスティングフレームワーク．アプリを外から見られるようになってる．
+
+UIAutomater Driver:ApiumのAndroid標準のドライバ
+→UI Automater ServerのAPKをインストールすると，サーバがそのアプリにアクセスして，テスト対象のAPKを自動的にテストする．
+
+#### 良いこと
+テスト対象以外のアプリに対しても操作が可能
+
+なんとResource IDを使って操作も可能
+
+#### 悪い点
+ネットワークによるボトルネック（遅い）
+
+### Espresso
+UIAutomaterを使ってた部分をEspressoに置き換える．
+
+EspressoをAppiumのドライバとして使用する．
+
+#### いいこと
+Contextにアクセスできる．
+
+IdlingResourceによるまちが不要→ボトルネックがない
+
+UIAutomaterと同じようにブラックボックスt機にテストできる
+
+#### 悪いこと
+アプリをまたいで操作できない
+
+Debugビルドのみ対応
+
+### 実際どうなの？
+シナリオの簡素化
+
+既存のView探索以外の手法も取れる
+
+乗り換えは簡単！・・・ではない？
+→サーバにRubyを使っているとキツい（appium_lib）が辛い→appium_lib_coreを使用する
