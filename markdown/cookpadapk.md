@@ -108,3 +108,45 @@ Debugビルドのみ対応
 
 乗り換えは簡単！・・・ではない？
 →サーバにRubyを使っているとキツい（appium_lib）が辛い→appium_lib_coreを使用する
+
+## Dynamic Feature Moduleの基本
+Android App Bundleの機能の一つ．
+
+アプリインストール語に特定のモジュールをあとからダウンロードできるようにする
+
+まだBeta．製品版に導入する場合にはBeta Programに登録する必要がある．
+
+### 始め方
+New Moduleで選ぶ
+
+Enable on-demand:動的配信をするか
+
+Fusing:4.4以下で使うか
+
+モジュール名:ユーザから見える
+
+### 中身
+AndroidMnifestの中のdist:moduleでさっき設定したものが再設定できる．
+
+### モジュールの依存関係
+普通は，appから各モジュールを参照する．
+
+DFMの場合は，逆で，各モジュールがappを参照する
+
+### Dynamic Delivery
+ダウンロード確認ダイアログなどは自分で出さないと勝手には出ない
+
+ダウンロードしてアクセスするには，SplitCompatなるものを使う
+
+### テストがしづらい
+モジュールのダウンロードはPlauConsoleの内部テストを使うしかない
+
+DIは工夫が必要．dagger.androidは使わないほうがいい？
+
+coreモジュールをappとは別に作って依存させたほうが楽．
+
+### bundletool
+AABからAPKを作ることができる
+
+### まとめ
+DaraBindingとかProguardなど，バグが残っている・・・
