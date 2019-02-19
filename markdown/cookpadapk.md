@@ -1,6 +1,6 @@
 # Cookpad.apk #2に行ってきました
 
-## 小山さん
+## 児山さん
 OSバージョンや端末固有の動作の違いは最近では少なくなってきた．
 →基本的にはカメラなどのハードウェアに依存する部分に動作の違いが生まれやすい．
 
@@ -149,7 +149,7 @@ coreモジュールをappとは別に作って依存させたほうが楽．
 AABからAPKを作ることができる
 
 ### まとめ
-DaraBindingとかProguardなど，バグが残っている・・・
+DataBindingとかProguardなど，バグが残っている・・・
 
 ## Kotlin Multiplatform Library
 ExpectとActualという，抽象化技術が良い
